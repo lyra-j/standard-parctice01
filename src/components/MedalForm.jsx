@@ -33,7 +33,7 @@ const MedalForm = ({ medals, setMedals }) => {
         return medal.nation === country;
       })
     ) {
-      alert("해당 국가가 이미 존재합니다. 업데이트 해주세요!");
+      alert("해당 국가는 이미 존재합니다. 업데이트 해주세요!");
       return;
     }
 
@@ -88,6 +88,8 @@ const MedalForm = ({ medals, setMedals }) => {
           onChange={(e) => setGold(+e.target.value)}
           placeholder="금메달 개수"
           required
+          min="0"
+          max="99"
         />
       </label>
       <label htmlFor="silverM">
@@ -99,6 +101,8 @@ const MedalForm = ({ medals, setMedals }) => {
           onChange={(e) => setSilver(+e.target.value)}
           placeholder="은메달 개수"
           required
+          min="0"
+          max="99"
         />
       </label>
       <label htmlFor="bronzeM">
@@ -110,6 +114,8 @@ const MedalForm = ({ medals, setMedals }) => {
           onChange={(e) => setBronze(+e.target.value)}
           placeholder="동메달 개수"
           required
+          min="0"
+          max="99"
         />
       </label>
       <button type="submit">추가 하기</button>
