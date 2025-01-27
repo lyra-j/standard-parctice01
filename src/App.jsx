@@ -72,7 +72,7 @@ function App() {
       <MedalForm medals={medals} setMedals={setMedals} />
 
       {/* (R)메달 리스트 보드 */}
-      <MedalList medals={medals} setMedals={setMedals} />
+      <MedalList medals={sortedMedals} setMedals={setMedals} />
     </main>
   );
 }
