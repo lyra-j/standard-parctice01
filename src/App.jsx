@@ -42,10 +42,10 @@ function App() {
   const sortedMedals = getSortedMedals();
 
   return (
-    <main>
+    <main className='main-container'>
       <h1>올림픽 메달 트래커 - 스탠다드반</h1>
       {/* 정렬 옵션 선택 */}
-      <div>
+      <div className='sort-wrapper'>
         <label htmlFor="goldChk">
           금메달 순
           <input

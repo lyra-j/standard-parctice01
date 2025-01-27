@@ -12,7 +12,7 @@ const MedalList = ({ medals, setMedals }) => {
   };
 
   return (
-    <ul>
+    <ul className='medal-list'>
       {medals.map((medal) => (
         <MedalItem
           key={medal.nation}

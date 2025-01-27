@@ -67,7 +67,7 @@ const MedalForm = ({ medals, setMedals }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="medal-form">
       <label htmlFor="nation">
         나라 이름
         <input
@@ -80,7 +80,7 @@ const MedalForm = ({ medals, setMedals }) => {
         />
       </label>
       <label htmlFor="goldM">
-        금메달
+        🥇금메달
         <input
           type="number"
           id="goldM"
@@ -93,7 +93,7 @@ const MedalForm = ({ medals, setMedals }) => {
         />
       </label>
       <label htmlFor="silverM">
-        은메달
+        🥈은메달
         <input
           type="number"
           id="silverM"
@@ -106,7 +106,7 @@ const MedalForm = ({ medals, setMedals }) => {
         />
       </label>
       <label htmlFor="bronzeM">
-        동메달
+        🥉동메달
         <input
           type="number"
           id="bronzeM"
