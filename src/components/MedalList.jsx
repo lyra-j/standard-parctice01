@@ -9,6 +9,8 @@ const MedalList = ({ medals, setMedals }) => {
     });
 
     setMedals(deleteMedals);
+    localStorage.setItem("countryList", JSON.stringify(deleteMedals))
+    alert(`${country} 삭제되었습니다.`)
   };
 
   return (
