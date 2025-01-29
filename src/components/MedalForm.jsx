@@ -33,11 +33,13 @@ const MedalForm = ({ medals, setMedals }) => {
         return medal.nation === country;
       })
     ) {
-      alert("해당 국가는 이미 존재합니다. 업데이트 해주세요!");
+      alert(`${country} 이미 존재합니다. 업데이트 해주세요!`);
       return;
     }
 
     setMedals([...medals, newMdals]);
+    localStorage.setItem(JSON.stringify([...medals, newMdals]));
+    alert(`${country} 추가되었습니다.`)
     resetForm();
   };
 
