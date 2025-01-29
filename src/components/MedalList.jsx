@@ -15,7 +15,7 @@ const MedalList = ({ medals, setMedals }) => {
 
   return (
     <ul className='medal-list'>
-      {medals.length <=0 ? (<p>아직 정보가 없습니다. 정보를 등록해 주세요.</p>):(medals.map((medal) => (
+      {medals.length <= 0 ? (<p>아직 정보가 없습니다. 정보를 등록해 주세요.</p>) : (medals.map((medal) => (
         <MedalItem
           key={medal.nation}
           medal={medal}
