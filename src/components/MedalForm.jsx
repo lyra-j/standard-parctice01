@@ -52,7 +52,7 @@ const MedalForm = ({ medals, setMedals }) => {
 
     //기존데이터에 없는 경우, 국가 등록 안내
     if (!existingMedal) {
-      alert("존재하지 않는 나라입니다. 먼저 나라를 추가해주세요");
+      alert(`${country} 존재하지 않습니다. 추가해주세요!`);
       return;
     }
 
@@ -64,8 +64,9 @@ const MedalForm = ({ medals, setMedals }) => {
     });
 
     setMedals(updateMedals);
+    localStorage.setItem("countryList", JSON.stringify(updateMedals))
     resetForm();
-    alert("업데이트 되었습니다.");
+    alert(`${country} 업데이트 되었습니다.`);
   };
 
   return (
