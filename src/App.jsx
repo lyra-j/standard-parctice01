@@ -4,21 +4,10 @@ import MedalForm from "./components/MedalForm";
 import MedalList from "./components/MedalList";
 
 function App() {
-  // 전체 메달 리스트 관리
-  const [medals, setMedals] = useState([
-    {
-      nation: "대한민국",
-      goldM: 3,
-      silverM: 4,
-      bronzeM: 5,
-    },
-    {
-      nation: "프랑스",
-      goldM: 2,
-      silverM: 3,
-      bronzeM: 4,
-    },
-  ]);
+  // localStorage load
+  const countryList = JSON.parse(localStorage.getItem("countryList"))
+  // 전체 메달 리스트 관리 state || {}
+  const [medals, setMedals] = useState(()=>(countryList? countryList : []));
 
   //기존데이터 -> 정렬 -> 화면에출력
   const [sortType, setSortType] = useState("gold");
